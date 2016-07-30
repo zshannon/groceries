@@ -16,11 +16,11 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ## OMGHTTPURLRQ
 
-See README.markdown for full license text.
+https://github.com/mxcl/OMGHTTPURLRQ/blob/master/README.markdown
 
 ## PromiseKit
 
-@see README
+https://github.com/mxcl/PromiseKit/blob/master/README.markdown
 
 ## Realm
 

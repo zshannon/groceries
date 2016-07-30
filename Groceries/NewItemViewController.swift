@@ -12,9 +12,19 @@ class NewItemViewController: UIViewController {
 
   let item = Item()
   
+  @IBOutlet weak var nameTextField: UITextField?
+  @IBOutlet weak var shortDescriptionTextField: UITextField?
+  @IBOutlet weak var quantityTextField: UITextField?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    self.nameTextField?.becomeFirstResponder()
+  }
+  
   @IBAction func save(sender: AnyObject) {
-    item.name = "Hello World"
-    item.shortDescription = "Hello World"
+    item.name = self.nameTextField?.text ?? ""
+    item.shortDescription = self.shortDescriptionTextField?.text ?? ""
+    item.quantity = Int(self.quantityTextField?.text ?? "0") ?? 0
     item.save().then { result in
       self.dismissViewControllerAnimated(true) {
         

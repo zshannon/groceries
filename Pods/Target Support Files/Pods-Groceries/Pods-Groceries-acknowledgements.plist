@@ -31,7 +31,7 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>See README.markdown for full license text.</string>
+			<string>https://github.com/mxcl/OMGHTTPURLRQ/blob/master/README.markdown</string>
 			<key>Title</key>
 			<string>OMGHTTPURLRQ</string>
 			<key>Type</key>
@@ -39,7 +39,7 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>@see README</string>
+			<string>https://github.com/mxcl/PromiseKit/blob/master/README.markdown</string>
 			<key>Title</key>
 			<string>PromiseKit</string>
 			<key>Type</key>

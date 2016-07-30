@@ -8,6 +8,6 @@ target 'Groceries' do
   pod 'DZNEmptyDataSet', '~> 1.8'
   pod 'PromiseKit', '~> 3.1'
   pod 'RealmSwift', '~> 1.0'
-  pod 'Watchdog', '~> 2.0'
+  pod 'Watchdog', '~> 2.1'
   
 end

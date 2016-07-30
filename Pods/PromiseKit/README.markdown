@@ -19,77 +19,50 @@ PromiseKit is a thoughtful and complete implementation of promises for iOS and O
 
 [![Join the chat at https://gitter.im/mxcl/PromiseKit](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mxcl/PromiseKit?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/cocoapods/v/PromiseKit.svg?label=Current%20Release)  [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![codebeat](https://codebeat.co/badges/6a2fc7b4-cc8f-4865-a81d-644edd38c662)](https://codebeat.co/projects/github-com-mxcl-promisekit)
+[![Build Status](https://travis-ci.org/mxcl/PromiseKit.svg?branch=master)](https://travis-ci.org/mxcl/PromiseKit)
 
-# Which PromiseKit Should I Use?
-
-If you are writing a library, [**use PromiseKit 1.x**](https://github.com/mxcl/PromiseKit/tree/legacy-1.x). This is because PromiseKit > 2 breaks everytime Swift changes. While Swift is in flux it is not feasible to depend on a library that will break every time Xcode updates.
-
-If you are making an app then PromiseKit 3 is the best PromiseKit, you may have to make some fixes when Xcode updates, but probably you will be OK as long as you update PromiseKit when Xcode updates.
-
-PromiseKit 1 and 3 can be installed in parallel if necessary, but CocoaPods will not support this.
-
-Once Swift becomes ABI or API stable we can all just move to the latest PromiseKit.
-
-Thus we intend to support PromiseKit 1.x for longer than expected.
-
-
-# PromiseKit 3
-
-In Swift 2.0 `catch` and `defer` became reserved keywords mandating we rename our functions with these names. This forced a major semantic version change on PromiseKit and thus we took the opportunity to make other minor (source compatability breaking) improvements.
-
-Thus if you cannot afford to adapt to PromiseKit 3 but still want to use Xcode-7.0/Swift-2.0 we provide a [minimal changes branch] \(Swift 2.2 version [here](https://github.com/mxcl/PromiseKit/tree/swift-2.2-minimal-changes)\) where `catch` and `defer` are renamed `catch_` and `defer_` and all other changes are the bare minimum to make PromiseKit 2 compile against Swift 2.
-
-If you still are using Xcode 6 and Swift 1.2 then use PromiseKit 2.
-
-[minimal changes branch]: https://github.com/mxcl/PromiseKit/tree/swift-2.0-minimal-changes
-
-# PromiseKit 2
-
-PromiseKit 2 contains many interesting and important additions. Check out our our [release announcement](http://promisekit.org/PromiseKit-2.0-Released) for full details.
-
-# PromiseKit 1
-
-The original, nice to use with Objective-C, less nice to use with Swift, hence PromiseKit 2.
-
-
-# How To Get Started
-
-* Check out the complete, comprehensive [PromiseKit documentation](http://promisekit.org).
-* Read the [API documentation](http://cocoadocs.org/docsets/PromiseKit/), (note the documentation is not 100% currently as CocoaDocs is not good with Swift, you may have better luck reading the comments in the sources).
-* [Integrate](http://promisekit.org/getting-started) promises into your existing projects.
-
-## Quick Start Guide
-
-### CocoaPods
+# Getting Set Up
 
 ```ruby
-use_frameworks!
+#CocoaPods
+pod "PromiseKit", "~> 3.4"
 
-pod "PromiseKit", "~> 2.0"
+#Carthage
+github "mxcl/PromiseKit" ~> 3.4
 ```
 
-### Carthage
-```ruby
-github "mxcl/PromiseKit" ~> 2.0
-```
+Alternatively, clone PromiseKit and drag and drop its `xcodeproj` into your Xcode project.
 
-*Note*: In order to avoid linking nearly all system frameworks with PromiseKit, the convenience categories have not been included with the Carthage framework . You must manually copy the categories you need in from the Carthage checkout.
+## Documentation
 
-### Standalone Distributions
+* We have a gentle but thorough introduction to PromiseKit at [promisekit.org](http://promisekit.org/introduction/).
 
-* [iOS 8 & OS X 10.9  Frameworks](https://github.com/mxcl/PromiseKit/releases/download/2.2.2/PromiseKit-2.2.2.zip) (Binaries)
+# PromiseKit vs. Xcode
 
-*Please note*, the preferred way to integrate PromiseKit is CocoaPods or Carthage.
+PromiseKit contains Swift, so we engage in an unending battle with Xcode:
 
-###  iOS 7 And Below
+| Xcode | Swift | PromiseKit |
+| ----- | ----- | ---------- |
+|   8   |  3.0  |      4     |
+|   8   |  2.3  |      3     |
+|   7   |  2.2  |      3     |
+|   6   |  1.2  |      2     |
+|   *   |  N/A  |      1     |
 
-Neither CocoaPods or Carthage will install PromiseKit 2 for an iOS 7 target. Your options are:
+PromiseKit 1 is pure Objective-C and thus works with all Xcodes, it is also your only choice if you need to support iOS 7 or below.
 
- 1. `pod "PromiseKit", "~> 1.7"` †‡
- 2. Use our [iOS 7 EZ-Bake](https://github.com/PromiseKit/EZiOS7)
- 3. Download our pre-built static framework (coming soon!)
+---
 
-† There is no Swift support with PromiseKit 1.x installed via CocoaPods.<br>‡ PromiseKit 1.x will work as far back as iOS 5 if required.
+We maintain some branches to aid migrating between Swift versions:
+
+| Xcode | Swift | PromiseKit | Branch |
+| ----- | ----- | -----------| ---------------- |
+|  7.3  |  2.2  | 2 | swift-2.2-minimal-changes |
+|  7.2  |  2.2  | 2 | swift-2.2-minimal-changes |
+|  7.1  |  2.1  | 2 | swift-2.0-minimal-changes |
+|  7.0  |  2.0  | 2 | swift-2.0-minimal-changes |
+
+We do **not** backport fixes (mostly) to these migration-branches.
 
 
 # Support
