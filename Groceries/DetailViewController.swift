@@ -12,20 +12,20 @@ class DetailViewController: UIViewController {
 
   @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
-  var detailItem: AnyObject? {
+  var item: Item? {
     didSet {
-        // Update the view.
-        self.configureView()
+      // Update the view.
+      self.configureView()
     }
   }
 
   func configureView() {
     // Update the user interface for the detail item.
-    if let detail = self.detailItem {
-        if let label = self.detailDescriptionLabel {
-            label.text = detail.description
-        }
+    if let item = self.item {
+      self.navigationItem.title = item.name
+      if let label = self.detailDescriptionLabel {
+        label.text = item.description
+      }
     }
   }
 

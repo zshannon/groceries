@@ -1,0 +1,45 @@
+PODS:
+  - DZNEmptyDataSet (1.8.1)
+  - OMGHTTPURLRQ (3.1.2):
+    - OMGHTTPURLRQ/RQ (= 3.1.2)
+  - OMGHTTPURLRQ/FormURLEncode (3.1.2)
+  - OMGHTTPURLRQ/RQ (3.1.2):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.1.2)
+  - PromiseKit (3.2.0):
+    - PromiseKit/Foundation (= 3.2.0)
+    - PromiseKit/QuartzCore (= 3.2.0)
+    - PromiseKit/UIKit (= 3.2.0)
+  - PromiseKit/CorePromise (3.2.0)
+  - PromiseKit/Foundation (3.2.0):
+    - OMGHTTPURLRQ (~> 3.1.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (3.2.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (3.2.0):
+    - PromiseKit/CorePromise
+  - Realm (1.0.1):
+    - Realm/Headers (= 1.0.1)
+  - Realm/Headers (1.0.1)
+  - RealmSwift (1.0.1):
+    - Realm (= 1.0.1)
+  - Watchdog (2.1)
+
+DEPENDENCIES:
+  - DZNEmptyDataSet (~> 1.8)
+  - PromiseKit (~> 3.1)
+  - RealmSwift (~> 1.0)
+  - Watchdog (~> 2.0)
+
+SPEC CHECKSUMS:
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  OMGHTTPURLRQ: 38316b56d88125c600bcdb16df8329147da2b0ee
+  PromiseKit: 1db024241265f428137a9f3c00ff9590740c4be6
+  Realm: 2e15e39d35b08abb529e212ed5d8af107b5236c8
+  RealmSwift: d73ea2af08c3676dbdd5e4b669651a0f492162a4
+  Watchdog: a891d7ed53b6620aa70c698b39ee2f9eac4d0419
+
+PODFILE CHECKSUM: d008cc9a0cb6fdd9468b909098f9c098feae72da
+
+COCOAPODS: 1.0.1
