@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		118E12641D4C47E900557F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12631D4C47E900557F1F /* AppDelegate.swift */; };
-		118E12661D4C47E900557F1F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12651D4C47E900557F1F /* MasterViewController.swift */; };
-		118E12681D4C47E900557F1F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12671D4C47E900557F1F /* DetailViewController.swift */; };
+		118E12661D4C47E900557F1F /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12651D4C47E900557F1F /* ItemsViewController.swift */; };
+		118E12681D4C47E900557F1F /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12671D4C47E900557F1F /* ItemViewController.swift */; };
 		118E126B1D4C47E900557F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118E12691D4C47E900557F1F /* Main.storyboard */; };
 		118E126D1D4C47E900557F1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118E126C1D4C47E900557F1F /* Assets.xcassets */; };
 		118E12701D4C47E900557F1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118E126E1D4C47E900557F1F /* LaunchScreen.storyboard */; };
 		118E12781D4C491000557F1F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12771D4C491000557F1F /* Item.swift */; };
 		118E127A1D4C4A0000557F1F /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E12791D4C4A0000557F1F /* Queue.swift */; };
-		118E127C1D4C4E3C00557F1F /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E127B1D4C4E3C00557F1F /* NewItemViewController.swift */; };
 		118E127E1D4C50CB00557F1F /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118E127D1D4C50CB00557F1F /* ItemTableViewCell.swift */; };
 		7ED2A21E7CE8A0806C2A8C2A /* Pods_Groceries.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CDD9AC7534E5CB633BA446 /* Pods_Groceries.framework */; };
 /* End PBXBuildFile section */
@@ -24,15 +23,14 @@
 		07A8F2A8F12A99F927191D12 /* Pods-Groceries.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Groceries/Pods-Groceries.debug.xcconfig"; sourceTree = "<group>"; };
 		118E12601D4C47E900557F1F /* Groceries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Groceries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		118E12631D4C47E900557F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		118E12651D4C47E900557F1F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		118E12671D4C47E900557F1F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		118E12651D4C47E900557F1F /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		118E12671D4C47E900557F1F /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		118E126A1D4C47E900557F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		118E126C1D4C47E900557F1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118E126F1D4C47E900557F1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		118E12711D4C47E900557F1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		118E12771D4C491000557F1F /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		118E12791D4C4A0000557F1F /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		118E127B1D4C4E3C00557F1F /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		118E127D1D4C50CB00557F1F /* ItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		A6CDD9AC7534E5CB633BA446 /* Pods_Groceries.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Groceries.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A783B928775FB2CB343ADE9B /* Pods-Groceries.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Groceries.release.xcconfig"; path = "Pods/Target Support Files/Pods-Groceries/Pods-Groceries.release.xcconfig"; sourceTree = "<group>"; };
@@ -72,15 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				118E12631D4C47E900557F1F /* AppDelegate.swift */,
-				118E12651D4C47E900557F1F /* MasterViewController.swift */,
-				118E12671D4C47E900557F1F /* DetailViewController.swift */,
+				118E12651D4C47E900557F1F /* ItemsViewController.swift */,
+				118E12671D4C47E900557F1F /* ItemViewController.swift */,
 				118E12691D4C47E900557F1F /* Main.storyboard */,
 				118E126C1D4C47E900557F1F /* Assets.xcassets */,
 				118E126E1D4C47E900557F1F /* LaunchScreen.storyboard */,
 				118E12711D4C47E900557F1F /* Info.plist */,
 				118E12771D4C491000557F1F /* Item.swift */,
 				118E12791D4C4A0000557F1F /* Queue.swift */,
-				118E127B1D4C4E3C00557F1F /* NewItemViewController.swift */,
 				118E127D1D4C50CB00557F1F /* ItemTableViewCell.swift */,
 			);
 			path = Groceries;
@@ -227,10 +224,9 @@
 			files = (
 				118E127A1D4C4A0000557F1F /* Queue.swift in Sources */,
 				118E12781D4C491000557F1F /* Item.swift in Sources */,
-				118E127C1D4C4E3C00557F1F /* NewItemViewController.swift in Sources */,
-				118E12681D4C47E900557F1F /* DetailViewController.swift in Sources */,
+				118E12681D4C47E900557F1F /* ItemViewController.swift in Sources */,
 				118E127E1D4C50CB00557F1F /* ItemTableViewCell.swift in Sources */,
-				118E12661D4C47E900557F1F /* MasterViewController.swift in Sources */,
+				118E12661D4C47E900557F1F /* ItemsViewController.swift in Sources */,
 				118E12641D4C47E900557F1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

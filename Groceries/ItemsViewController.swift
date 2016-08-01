@@ -11,10 +11,8 @@ import PromiseKit
 import RealmSwift
 import UIKit
 
-class MasterViewController: UITableViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+class ItemsViewController: UITableViewController, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
 
-  var detailViewController: DetailViewController? = nil
-  
   var items = Results<Item>?()
   var token: NotificationToken? {
     didSet {
@@ -29,11 +27,6 @@ class MasterViewController: UITableViewController, DZNEmptyDataSetDelegate, DZNE
     tableView.emptyDataSetSource = self
     tableView.emptyDataSetDelegate = self
     tableView.tableFooterView = UIView()
-    
-    if let split = self.splitViewController {
-        let controllers = split.viewControllers
-        self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-    }
     
     self.items = Item.all()
     self.token = self.items?.addNotificationBlock({ changes in
@@ -63,11 +56,13 @@ class MasterViewController: UITableViewController, DZNEmptyDataSetDelegate, DZNE
 
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "Items#show" {
-      if let indexPath = self.tableView.indexPathForSelectedRow {
-        let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+      if let indexPath = self.tableView.indexPathForSelectedRow, controller = segue.destinationViewController as? ItemViewController {
         controller.item = items![indexPath.row]
-        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-        controller.navigationItem.leftItemsSupplementBackButton = true
+      }
+    }
+    else if segue.identifier == "Items#new" {
+      if let controller = segue.destinationViewController as? ItemViewController {
+        controller.item = Item()
       }
     }
   }

@@ -19,6 +19,12 @@ class Item: Object {
   dynamic var completedAt: NSDate? = nil
   dynamic var createdAt = NSDate()
   
+  var completed: Bool {
+    get {
+      return completedAt != nil
+    }
+  }
+  
   override static func primaryKey() -> String? {
     return "id"
   }
@@ -27,7 +33,7 @@ class Item: Object {
     return try! Realm().objects(Item).sorted("createdAt")
   }
   
-  func markCompleted() -> Promise<Bool> {
+  func markCompleted(completed: Bool = true) -> Promise<Bool> {
     return Promise { resolve, reject in
       let id = self.id
       Queue.global.async({
@@ -35,7 +41,12 @@ class Item: Object {
           let realm = try Realm()
           if let item = realm.objectForPrimaryKey(Item.self, key: id) {
             try realm.write({
-              item.completedAt = NSDate()
+              if completed {
+                item.completedAt = NSDate()
+              }
+              else {
+                item.completedAt = nil
+              }
               Queue.main.async({ 
                 resolve(true)
               })
@@ -44,25 +55,6 @@ class Item: Object {
           else {
             reject(NSError(domain: "me.zcs.groceries", code: 404, userInfo: nil))
           }
-        }
-        catch let error {
-          reject(error)
-        }
-      })
-    }
-  }
-  
-  func save() -> Promise<Bool> {
-    return Promise { resolve, reject in
-      Queue.main.async({
-        do {
-          let realm = try Realm()
-          try realm.write({
-            realm.add(self, update: true)
-            Queue.main.async({
-              resolve(true)
-            })
-          })
         }
         catch let error {
           reject(error)
@@ -95,5 +87,5 @@ class Item: Object {
       })
     }
   }
-  
+
 }
